@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Задание 6</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="content">
+            <h1>Калькулятор стоимости заказа</h1>
+            <form method="POST" id="form1">
+                <label>Количество товара:</label><br>
+                <br>
+                    <input id="count" type="text" name="amount" placeholder="Введите количество товара"><br>
+                <br>
+                <label>Тип товара:</label><br>
+                <br>
+                <select name="selection">
+                    <option value="1">Смартфон гэлэкси джей 1 мини</option>
+                    <option value="2">Сухарики 3 корочки</option>
+                    <option value="3">Рамен классический</option>
+                </select>
+                <br>
+                <div class="radioBut" id="radioBut" style="display: none;">
+                    <br>
+                    <label>Объем:</label><br>
+                    <br>
+                    <label><input type="radio" name="radioBut" value="r1">50г</label>
+                    <label><input type="radio" name="radioBut" value="r2">80г</label>
+                    <label><input type="radio" name="radioBut" value="r3">130г</label>
+                </div> 
+                <div class="check1" id="check1" style="display: block;">
+                    <br>
+                    <label>Дополнительные ингредиенты:</label><br>
+                    <br>
+                    <label><input type="checkbox" name="c1">Паровая булочка</label>
+                    <label><input type="checkbox" name="c2">+50г феле</label>
+                    <label><input type="checkbox" name="c3">Двойная порция</label>
+                </div>
+                <br>
+                <input id="sumbit_form" autocomplete="off" type="button" onclick="updatePrice()" name="button" value="Отправить">
+              </form>
+        </div>
+        
+        <div id="result">Стоимость заказа: <span class="result-text">0</span> рублей.</div>
+    
+        <script src="script.js" defer=""></script>
+</body></html>
