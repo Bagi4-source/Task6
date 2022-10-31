@@ -55,23 +55,23 @@ function updateView(){
   console.log(selector.value);
   switch (parseInt(selector.value)) {
     case 2:
-      document.querySelector("div.check1").style.display = "none";
-      document.querySelectorAll("input[name=c1]").checked = false;
+      document.querySelector("div.checks").style.display = "none";
+      document.querySelectorAll("input[name=value1]").checked = false;
 
-      document.querySelector("div.radioBut").style.display = "block";
-      document.querySelector("input[name=radioBut]").checked = true;
+      document.querySelector("div.radioButtoun").style.display = "block";
+      document.querySelector("input[name=radioButtoun]").checked = true;
       break;
     case 3:
-      document.querySelector("div.radioBut").style.display = "none";
-      document.querySelectorAll("input[name=radioBut]").checked = false;
+      document.querySelector("div.radioButtoun").style.display = "none";
+      document.querySelectorAll("input[name=radioButtoun]").checked = false;
 
-      document.querySelector("div.check1").style.display = "block";
+      document.querySelector("div.checks").style.display = "block";
       break;
     default:
-      document.querySelector("div.radioBut").style.display = "none";
-      document.querySelector("div.check1").style.display = "none";
-      document.querySelectorAll("input[name=radioBut]").checked = false;
-      document.querySelectorAll("input[name=c1]").checked = false;
+      document.querySelector("div.radioButtoun").style.display = "none";
+      document.querySelector("div.checks").style.display = "none";
+      document.querySelectorAll("input[name=radioButtoun]").checked = false;
+      document.querySelectorAll("input[name=value1]").checked = false;
   }
 }
 
