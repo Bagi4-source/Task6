@@ -1,14 +1,14 @@
 let prices = {
-  selections : [10000, 40, 300],
-  radioButs: {
-      r1 : 0,
-      r2 : 10,
-      r3 : 20,
+  variants : [10000, 40, 300],
+  radioButtons: {
+      value1 : 0,
+      value2 : 10,
+      value3 : 20,
   },
-  checks: {
-      c1 : 70,
-      c2 : 50,
-      c3 : 100,
+  checkBoxes: {
+      value1 : 70,
+      value2 : 50,
+      value3 : 100,
   }
 };
 
@@ -21,20 +21,20 @@ function get_price(){
       return NaN;
   } else {
     let selector = document.querySelector("select[name=selection]");
-    let price = prices.selections[parseInt(selector.value) - 1];
+    let price = prices.variants[parseInt(selector.value) - 1];
     let elements;
     switch (parseInt(selector.value)) {
       case 2:
         elements = document.querySelectorAll("input[name=radioBut]:checked");
         elements.forEach(function(element) {
-          price += prices.radioButs[element.value];
+          price += prices.radioButtons[element.value];
         });
         break;
       case 3:
         elements = document.querySelectorAll("div.check1 > label > input:checked");
         elements.forEach(function(element) {
           console.log(element.name);
-          price += prices.checks[element.name];
+          price += prices.checkBoxes[element.name];
         });
         break;
       default:
