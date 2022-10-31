@@ -25,13 +25,13 @@ function get_price(){
     let elements;
     switch (parseInt(selector.value)) {
       case 2:
-        elements = document.querySelectorAll("input[name=radioBut]:checked");
+        elements = document.querySelectorAll("input[name=radioButtoun]:checked");
         elements.forEach(function(element) {
           price += prices.radioButtons[element.value];
         });
         break;
       case 3:
-        elements = document.querySelectorAll("div.check1 > label > input:checked");
+        elements = document.querySelectorAll("div.checks input:checked");
         elements.forEach(function(element) {
           console.log(element.name);
           price += prices.checkBoxes[element.name];
